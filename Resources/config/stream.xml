@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="societo.storage" class="Societo\Util\StorageBundle\Storage\Storage">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+
+        <service id="societo.stream.driver.doctrine" class="Societo\Util\StorageBundle\Stream\DoctrineDriver">
+            <tag name="societo.stream.driver" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+
+        <service id="societo.stream.driver.file" class="Societo\Util\StorageBundle\Stream\FileDriver">
+            <argument type="service" id="filesystem" />
+            <argument>%kernel.root_dir%/Resources/uploaded</argument>
+            <tag name="societo.stream.driver" />
+        </service>
+    </services>
+</container>
