@@ -9,7 +9,7 @@ namespace Societo\Util\StorageBundle\Tests\Entity;
 use Societo\Util\StorageBundle\Entity\File as FileEntity;
 use Societo\BaseBundle\Test\EntityTestCase;
 
-class File extends EntityTestCase
+class FileTest extends EntityTestCase
 {
     public function createTestEntityManager($entityPaths = array())
     {

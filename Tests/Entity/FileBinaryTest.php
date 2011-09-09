@@ -9,7 +9,7 @@ namespace Societo\Util\StorageBundle\Tests\Entity;
 use Societo\Util\StorageBundle\Entity\FileBinary as FileBinaryEntity;
 use Societo\BaseBundle\Test\EntityTestCase;
 
-class FileBinary extends EntityTestCase
+class FileBinaryTest extends EntityTestCase
 {
     public function createTestEntityManager($entityPaths = array())
     {
